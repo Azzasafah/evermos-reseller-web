@@ -1,4 +1,4 @@
-# Evermos Social Commerce RESTful API &mdash; Remastered Edition
+# Evermos Social Commerce NEXT JS &mdash; Remastered Edition
 
 <p align="center">
   <img src="https://img.shields.io/badge/Golang-1.22%2B-00ADD8?style=for-the-badge&logo=go&logoColor=white" alt="Golang 1.22+">
