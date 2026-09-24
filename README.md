@@ -1,13 +1,13 @@
-# Evermos Social Commerce NEXT JS &mdash; Remastered Edition
+# Evermos Reseller Social Commerce &mdash; Frontend Edition
 
 <p align="center">
-  <img src="https://img.shields.io/badge/Golang-1.22%2B-00ADD8?style=for-the-badge&logo=go&logoColor=white" alt="Golang 1.22+">
-  <img src="https://img.shields.io/badge/Gin_Gonic-Web_Framework-00ADD8?style=for-the-badge&logo=gin" alt="Gin Gonic">
-  <img src="https://img.shields.io/badge/Database-MySQL_8.0-4479A1?style=for-the-badge&logo=mysql&logoColor=white" alt="MySQL 8.0">
-  <img src="https://img.shields.io/badge/ORM-GORM-00ADD8?style=for-the-badge" alt="GORM">
-  <img src="https://img.shields.io/badge/Auth-JWT_Bearer-000000?style=for-the-badge&logo=jsonwebtokens&logoColor=white" alt="JWT Bearer">
-  <img src="https://img.shields.io/badge/Postman-100%25_Verified-FF6C37?style=for-the-badge&logo=postman&logoColor=white" alt="Postman Verified">
-  <img src="https://img.shields.io/badge/Architecture-Clean_Architecture-121212?style=for-the-badge" alt="Clean Architecture">
+  <img src="https://img.shields.io/badge/Next.js-15.5-000000?style=for-the-badge&logo=next.js&logoColor=white" alt="Next.js 15">
+  <img src="https://img.shields.io/badge/React-19.0-61DAFB?style=for-the-badge&logo=react&logoColor=black" alt="React 19">
+  <img src="https://img.shields.io/badge/TypeScript-5.0-3178C6?style=for-the-badge&logo=typescript&logoColor=white" alt="TypeScript 5">
+  <img src="https://img.shields.io/badge/Tailwind_CSS-3.4-38B2AC?style=for-the-badge&logo=tailwind-css&logoColor=white" alt="Tailwind CSS">
+  <img src="https://img.shields.io/badge/Motion-Framer_Motion-0055FF?style=for-the-badge&logo=framer&logoColor=white" alt="Framer Motion">
+  <img src="https://img.shields.io/badge/Design_System-Double_Bezel-10B981?style=for-the-badge" alt="Double Bezel">
+  <img src="https://img.shields.io/badge/Architecture-App_Router-121212?style=for-the-badge" alt="App Router">
 </p>
 
 <br>
@@ -16,301 +16,174 @@
 
 ## 📌 Project Overview
 
-This repository is a **Remastered Edition** of the capstone project assignment from the **Project-Based Internship: Rakamin Academy x Evermos (Backend Developer)**.
+This repository is the **Frontend Edition** of the flagship capstone project for the **Project-Based Internship: Rakamin Academy x Evermos (Backend & Fullstack Developer)**.
 
-The core mission of the internship was to engineer a high-throughput, secure, and production-grade RESTful API modeled after **Evermos** &mdash; Indonesia's premier social commerce ecosystem empowering MSMEs (*UMKM*) and independent resellers to sell curated halal products without holding physical inventory.
+Engineered as a high-end web application companion to the **Go Clean Architecture RESTful API**, this client platform replicates the core user experience of **Evermos** &mdash; Indonesia's leading social commerce ecosystem empowering MSMEs (*UMKM*) and independent resellers to distribute halal products without holding physical inventory.
 
-The original internship assignment mandated:
-1. **Relational Database Design**: Designing and implementing a normalized schema based on the official ERD (`Diagram.drawio`) covering users, stores, categories, products, addresses, transactions, and audit logs.
-2. **Clean Architecture in Go**: Structuring a modular backend with Gin and GORM implementing strict separation of concerns (Domain, Repository, UseCase, Delivery/Handler).
-3. **Postman API Compliance**: Validating every endpoint against the comprehensive test suite (`Rakamin Evermos Virtual Internship.postman_collection.json`).
-
-In this **Remastered Edition**, the entire codebase has been re-architected with enterprise engineering best practices: atomic ACID checkout transactions, immutable product audit logging (`log_produk`), multi-photo uploads, pre-configured seed data, and a companion **Next.js 15 (React 19 & Tailwind CSS)** frontend client featuring an interactive reseller margin simulator and seller dashboard.
+Built from the ground up using **Next.js 15 (App Router)**, **React 19**, **TypeScript**, and **Tailwind CSS**, the platform provides an agency-grade user experience featuring a custom **Double-Bezel Architecture (*Doppelrand*)**, **Refractive Glassmorphism**, seamless **CSS variable-driven Dual Theming**, a live **Reseller Commission Simulator**, and a comprehensive **Seller & Member Center Dashboard**.
 
 ---
 
-## 🚀 Key Improvements in the Remastered Edition
+## 🚀 Key Frontend Architectural Highlights & Design System
 
-- **Strict Clean Architecture Separation**:
-  - Implemented decoupled concentric layers: **Domain Models** &rarr; **Repository** (GORM queries & interfaces) &rarr; **UseCase** (business orchestration) &rarr; **Delivery/Handler** (Gin HTTP controllers & DTO binding).
-- **Relational Integrity & ACID Checkout Transactions**:
-  - Multi-item checkout executed within an atomic database transaction with automatic rollback protection.
-  - Automated product stock deduction with concurrent availability validation.
-  - Generates immutable snapshots of ordered items into `log_produk` to preserve historical catalog state and audit pricing.
-- **Automated Store Provisioning**:
-  - On user registration, a dedicated digital storefront (`toko`) is automatically created and bound to the new reseller account.
-- **Multi-Part Media Asset Handling**:
-  - Robust file upload handling for store avatars and multi-image product galleries with timestamped unique filenames under `/uploads` and static file streaming.
-- **Companion Next.js 15 Client Portal**:
-  - An agency-grade frontend built with Next.js 15 (App Router), React 19, and Tailwind CSS. Features a *Double-Bezel* design system, live reseller commission calculator, and dynamic CSS variable-driven light/dark themes.
-- **100% Postman Collection Compliance**:
-  - All 28+ required requests across authentication, store management, address book CRUD, product catalog filtering, and order transactions pass cleanly.
+- **Double-Bezel Component Architecture (*Doppelrand*)**:
+  - Implemented layered contour nesting (`.double-bezel-shell` and `.double-bezel-core`) with realistic ambient depth, subtle inner glow, and smooth spring physics transitions for product cards and modals.
+- **Refractive Glassmorphism**:
+  - Floating pill navigation bar utilizing multi-stop backdrop blur (`backdrop-filter: blur(20px)`), frosted glass specular reflections, and responsive elevation shadows.
+- **Seamless CSS Variable-Driven Dual Theming**:
+  - Zero-FOUC (Flash of Unstyled Content) and zero-layout-shift theme switching between:
+    - **Light Mode**: Warm, luxury off-white canvas (`#f8fafc`) with high-contrast slate typography (`text-zinc-950`).
+    - **Dark Mode**: Deep OLED obsidian black canvas (`#09090b`) with crisp white typography (`text-zinc-100`) and emerald ambient radial glows.
+  - Managed globally through `ThemeContext` with instant `localStorage` persistence and system color-scheme detection.
+- **Fluid Micro-Interactions & Spring Motion**:
+  - Interactive button hover physics, photo zoom transitions, and smooth dialog transitions powered by **Framer Motion** and **Lucide React**.
+- **Typed API Client Abstraction Layer**:
+  - A clean, decoupled client service (`src/lib/api.ts`) interfacing with the Go backend. Features automatic JWT session injection, multipart form-data serialization for image uploads, and normalized error handling.
 
 ---
 
 ## 🛠️ Feature Breakdown
 
-### 1. Authentication & Profile Management (`/auth`, `/user`)
-- **JWT Stateless Token Authentication**:
-  - `POST /auth/register` &mdash; Registers a new user, hashes password with bcrypt, and automatically provisions an affiliated store (`toko`).
-  - `POST /auth/login` &mdash; Validates phone number and password, generating a signed JWT token.
-- **Profile Operations**:
-  - `GET /user` &mdash; Retrieves the authenticated user's profile with resolved province and city relations.
-  - `PUT /user` &mdash; Updates user personal information (name, bio, occupation, email).
+### 1. 💰 Live Reseller Margin & Commission Simulator
+- Interactive real-time calculator embedded directly in the hero section.
+- Dynamically compares wholesale reseller prices (`harga_reseller`) against recommended consumer prices (`harga_konsumen`).
+- Computes net profit per item on the fly, demonstrating immediate business value to prospective resellers.
 
-### 2. Store Management (`/toko`)
-- **Public & Reseller Storefronts**:
-  - `GET /toko` &mdash; Public paginated directory of registered merchant stores.
-  - `GET /toko/my` &mdash; Retrieves the store belonging to the authenticated reseller.
-  - `PUT /toko/:id` &mdash; Updates store name and uploads store banner/avatar (`multipart/form-data`).
+### 2. 🛍️ Dynamic Product Discovery & Catalog
+- **Instant Search**: Real-time filtering by product title without full page reloads.
+- **Category Taxonomy Pills**: One-click category filtering (Fashion Muslim, Electronics, Halal Food, etc.).
+- **Live Inventory Indicators**: Visual stock status pills (Available / Out of Stock) with color-coded badges.
+- **Hover Quick Actions**: Smooth overlay buttons on product cards for quick preview and instant cart addition.
 
-### 3. Shipping Address Book (`/alamat`)
-- **Multi-Address Management**:
-  - `GET /alamat` &mdash; Lists all delivery addresses registered to the authenticated user.
-  - `POST /alamat` &mdash; Adds a new shipping address (recipient name, phone, detailed location).
-  - `PUT /alamat/:id` &mdash; Updates existing shipping address details.
-  - `DELETE /alamat/:id` &mdash; Removes an address with ownership validation.
+### 3. 🔍 High-Definition Product Detail Modal
+- Multi-photo gallery carousel displaying high-resolution Unsplash photography.
+- Store ownership attribution badge linking products to their originating merchant store.
+- Itemized pricing economics showing wholesale base, consumer retail price, and reseller commission.
+- Action triggers for both **"Beli Langsung"** (Direct Single Checkout) and **"Tambah ke Keranjang"**.
 
-### 4. Categories & Product Catalog (`/category`, `/produk`)
-- **Category Taxonomy**:
-  - `GET /category` &mdash; Lists available product categories (Fashion Muslim, Electronics, Halal Food, etc.).
-  - `POST /category` &mdash; Creates a new category (Restricted to Administrator accounts via `is_admin` claim).
-- **Product Catalog Engine**:
-  - `GET /produk` &mdash; Filterable product listing supporting keyword search (`nama_produk`), category filter (`category_id`), and pagination (`page`, `limit`).
-  - `GET /produk/:id` &mdash; Retrieves detailed product info with multi-image gallery (`foto_produk`) and store metadata.
-  - `POST /produk` &mdash; Creates a product listing with wholesale price (`harga_reseller`), consumer retail price (`harga_konsumen`), stock count, and multi-file image uploads.
-  - `PUT /produk/:id` &mdash; Updates product information with store ownership enforcement.
-  - `DELETE /produk/:id` &mdash; Deletes product listing and associated photo records.
+### 4. 🛒 Shopping Bag & Multi-Item Checkout Flow
+- Client-side synchronized shopping cart state via `AuthContext`.
+- **Integrated Address Book Selector**: Resellers can select from their saved shipping addresses during checkout.
+- Automated payload dispatch to the backend `/trx` endpoint, generating order records, line items, and audit entries.
 
-### 5. Transactions & Order Processing (`/trx`)
-- **ACID-Compliant Order Processing**:
-  - `POST /trx` &mdash; Executes order checkout with selected shipping address (`id_alamat`) and items array (`detail_trx`). Deducts stock, writes order records, and logs snapshots to `log_produk`.
-  - `GET /trx` &mdash; Lists historical transactions for the authenticated user.
-  - `GET /trx/:id` &mdash; Retrieves specific order breakdown, invoice details, item quantities, and pricing.
+### 5. 🏪 Seller & Member Center Dashboard (`/dashboard`)
+- **Profile Management**: Update personal reseller details (full name, phone, birth date, occupation, and bio).
+- **Storefront Branding**: Customize store name and upload store banner/avatar (`multipart/form-data`).
+- **Shipping Address Book**: Complete CRUD interface for managing multiple delivery addresses.
+- **Store Inventory Manager**: Add new products with image uploads, wholesale pricing, retail pricing, stock counts, category tags, and descriptions.
+- **Transaction History**: Comprehensive ledger tracking orders, invoice codes, items purchased, and total expenditure.
+
+### 6. 🔐 Unified Authentication Modal
+- Seamless modal dialog switching between Login and Registration workflows.
+- Automatic digital storefront (`toko`) provisioning upon registration.
+- Persistent session storage with automatic token attachment for subsequent requests.
 
 ---
 
-## 🏛️ Database Schema & Entity Relationships
+## 🏛️ Component Architecture & Directory Structure
 
-```mermaid
-erDiagram
-    USERS ||--|| TOKO : "owns exactly 1"
-    USERS ||--o{ ALAMAT : "registers N"
-    USERS ||--o{ TRX : "creates N"
-    TOKO ||--o{ PRODUK : "lists N"
-    CATEGORY ||--o{ PRODUK : "classifies N"
-    PRODUK ||--o{ FOTO_PRODUK : "has N photos"
-    PRODUK ||--o{ DETAIL_TRX : "ordered in N"
-    PRODUK ||--o{ LOG_PRODUK : "audited in N"
-    TRX ||--o{ DETAIL_TRX : "contains N items"
-    TRX ||--o{ LOG_PRODUK : "linked to N"
-    ALAMAT ||--o{ TRX : "shipping destination"
-
-    USERS {
-        int id PK
-        string nama
-        string kata_sandi
-        string notelp UK
-        string tanggal_lahir
-        string jenis_kelamin
-        string tentang
-        string pekerjaan
-        string email
-        string id_provinsi
-        string id_kota
-        boolean is_admin
-        datetime created_at
-        datetime updated_at
-    }
-
-    TOKO {
-        int id PK
-        int id_user FK
-        string nama_toko
-        string url_foto
-        datetime created_at
-        datetime updated_at
-    }
-
-    CATEGORY {
-        int id PK
-        string nama_category
-        datetime created_at
-        datetime updated_at
-    }
-
-    PRODUK {
-        int id PK
-        int id_toko FK
-        int id_category FK
-        string nama_produk
-        string slug
-        int harga_reseller
-        int harga_konsumen
-        int stok
-        text deskripsi
-        datetime created_at
-        datetime updated_at
-    }
-
-    FOTO_PRODUK {
-        int id PK
-        int id_produk FK
-        string url
-        datetime created_at
-        datetime updated_at
-    }
-
-    ALAMAT {
-        int id PK
-        int id_user FK
-        string judul_alamat
-        string nama_penerima
-        string no_telp
-        text detail_alamat
-        datetime created_at
-        datetime updated_at
-    }
-
-    TRX {
-        int id PK
-        int id_user FK
-        int id_alamat FK
-        int harga_total
-        string kode_invoice
-        datetime created_at
-        datetime updated_at
-    }
-
-    DETAIL_TRX {
-        int id PK
-        int id_trx FK
-        int id_produk FK
-        int kuantitas
-        int harga_total
-        datetime created_at
-        datetime updated_at
-    }
-
-    LOG_PRODUK {
-        int id PK
-        int id_produk FK
-        int id_toko FK
-        int id_category FK
-        string nama_produk
-        string slug
-        int harga_reseller
-        int harga_konsumen
-        int stok
-        text deskripsi
-        datetime created_at
-        datetime updated_at
-    }
+```
+Evermos-FE/
+├── src/
+│   ├── app/
+│   │   ├── dashboard/
+│   │   │   └── page.tsx         # Seller & Member Center portal (Tabs: Profile, Store, Alamat, Products, Trx)
+│   │   ├── globals.css          # Design system tokens, double-bezel CSS, radial ambient glow
+│   │   ├── layout.tsx           # Root layout with font optimization & dual-theme hydration
+│   │   └── page.tsx             # Landing page, hero, margin calculator, filterable catalog
+│   ├── components/
+│   │   ├── AuthModal.tsx        # Responsive JWT login & registration dialog
+│   │   ├── CheckoutModal.tsx    # Multi-item checkout & shipping address selector
+│   │   ├── Footer.tsx           # Editorial footer with navigation links & copyright
+│   │   ├── Navbar.tsx           # Floating glass pill navbar with theme switch & cart counter
+│   │   ├── ProductCard.tsx      # Double-bezel product card with hover action overlays
+│   │   └── ProductDetailModal.tsx # Product modal with multi-photo gallery carousel
+│   ├── context/
+│   │   ├── AuthContext.tsx      # Global auth state, user profile, cart, & token persistence
+│   │   └── ThemeContext.tsx     # Light/Dark mode state management with localStorage sync
+│   └── lib/
+│       └── api.ts               # Typed API client wrapper communicating with Go RESTful backend
+├── database/
+│   ├── README.md                # Database initialization documentation
+│   └── seeds/
+│       ├── seed.sql             # SQL seed dataset (Users, Stores, Products, Trx)
+│       └── seed_data.py         # Python automation runner
+├── .env.example                 # Template environment variables
+├── .gitignore                   # Git ignore rules for Next.js, TypeScript, and .agents
+├── package.json                 # Project dependencies and npm scripts
+├── tailwind.config.ts           # Tailwind CSS configuration with custom design tokens
+└── tsconfig.json                # TypeScript compiler configuration
 ```
 
 ---
 
-## 📑 REST API Endpoint Specifications
+## 📑 API Integration & Backend Mapping
 
-All authenticated endpoints require the JWT token passed via the `token` header:
+The frontend communicates with the **Go Clean Architecture** backend running on port `8080`:
 
-```http
-token: <jwt_token>
-Content-Type: application/json
-```
-
-| Method | Endpoint URI | Authorization | Description |
-| :--- | :--- | :--- | :--- |
-| `POST` | `/auth/register` | Public | Register new user & automatically provision store |
-| `POST` | `/auth/login` | Public | Authenticate phone & password, return JWT token |
-| `GET` | `/user` | `AuthRequired` | Retrieve authenticated user profile |
-| `PUT` | `/user` | `AuthRequired` | Update user personal details |
-| `GET` | `/toko` | Public | List stores with pagination |
-| `GET` | `/toko/my` | `AuthRequired` | Retrieve store belonging to authenticated user |
-| `PUT` | `/toko/:id` | `AuthRequired` | Update store name & upload banner/avatar |
-| `GET` | `/alamat` | `AuthRequired` | List saved shipping addresses for user |
-| `POST` | `/alamat` | `AuthRequired` | Create a new delivery address |
-| `PUT` | `/alamat/:id` | `AuthRequired` | Update existing address details |
-| `DELETE` | `/alamat/:id` | `AuthRequired` | Delete an address (Owner verified) |
-| `GET` | `/category` | Public | List all product categories |
-| `POST` | `/category` | `AdminOnly` | Create product category (Admin role required) |
-| `GET` | `/category/:id` | Public | Get specific category details |
-| `PUT` | `/category/:id` | `AdminOnly` | Update category name |
-| `DELETE` | `/category/:id` | `AdminOnly` | Delete category |
-| `GET` | `/produk` | Public | Browse catalog with query filters & pagination |
-| `GET` | `/produk/:id` | Public | Retrieve product detail with photo gallery |
-| `POST` | `/produk` | `AuthRequired` | Create product listing with multi-image upload |
-| `PUT` | `/produk/:id` | `AuthRequired` | Update product information (Store owner only) |
-| `DELETE` | `/produk/:id` | `AuthRequired` | Remove product listing |
-| `POST` | `/trx` | `AuthRequired` | Checkout order with address & items (ACID Transaction) |
-| `GET` | `/trx` | `AuthRequired` | Retrieve order history for authenticated user |
-| `GET` | `/trx/:id` | `AuthRequired` | Retrieve itemized transaction breakdown |
+| Frontend Feature | UI Component | Backend Endpoint | HTTP Method |
+| :--- | :--- | :--- | :---: |
+| **User Login** | `AuthModal.tsx` | `/auth/login` | `POST` |
+| **User Registration** | `AuthModal.tsx` | `/auth/register` | `POST` |
+| **Profile Management** | `dashboard/page.tsx` | `/user` | `GET` / `PUT` |
+| **Store Branding** | `dashboard/page.tsx` | `/toko/my` & `/toko/:id` | `GET` / `PUT` |
+| **Product Discovery** | `ProductCard.tsx` | `/produk` & `/category` | `GET` |
+| **Product Creation** | `dashboard/page.tsx` | `/produk` | `POST` |
+| **Address Book CRUD** | `dashboard/page.tsx` | `/alamat` & `/alamat/:id` | `GET` / `POST` / `PUT` / `DELETE` |
+| **Checkout & Orders** | `CheckoutModal.tsx` | `/trx` | `POST` |
+| **Order History** | `dashboard/page.tsx` | `/trx` & `/trx/:id` | `GET` |
 
 ---
 
 ## 💻 Local Installation & Setup
 
 ### Prerequisites
-- **Go** `>= 1.21`
-- **MySQL Server** `>= 8.0` (e.g., via XAMPP or native service)
-- **Node.js** `>= 18.x` & NPM *(optional, for companion frontend client)*
-- **Git**
+- **Node.js** `>= 18.17.0` or `>= 20.x`
+- **NPM** or **PNPM**
+- **Go Backend Server** running on `http://localhost:8080` *(recommended)*
 
 ### Installation Steps
 
 1. **Clone the Repository**:
    ```bash
    git clone <repository-url>
-   cd Evermos-BE
+   cd Evermos-FE
    ```
 
-2. **Configure Environment (`.env`)**:
-   Copy the example environment file and configure database credentials:
+2. **Install Dependencies**:
    ```bash
-   cp .env.example .env
-   ```
-   Ensure your `.env` configuration matches your local MySQL server:
-   ```dotenv
-   DB_HOST=localhost
-   DB_PORT=3306
-   DB_USER=root
-   DB_PASS=
-   DB_NAME=evermos_vix
-   PORT=8080
-   JWT_SECRET=evermos_super_secret_jwt_key
-   ```
-
-3. **Initialize Database & Seed Data**:
-   Create the database in MySQL and execute the comprehensive seed script:
-   ```bash
-   # Create database
-   mysql -u root -e "CREATE DATABASE IF NOT EXISTS evermos_vix;"
-
-   # Run SQL seed script
-   mysql -u root evermos_vix < database/seeds/seed.sql
-   ```
-   *(Alternatively, run the automated Python runner: `python database/seeds/seed_data.py`)*
-
-4. **Start the Go Backend Server**:
-   ```bash
-   go run main.go
-   ```
-   The backend RESTful API will listen on: **`http://localhost:8080`**
-
-5. **(Optional) Run Companion Frontend Client**:
-   In a separate terminal, navigate to the frontend directory:
-   ```bash
-   cd ../Evermos-FE
    npm install
+   ```
+
+3. **Configure Environment Variables**:
+   Copy the example environment template:
+   ```bash
+   cp .env.example .env.local
+   ```
+   Ensure the API URL points to your running Go backend:
+   ```dotenv
+   NEXT_PUBLIC_API_URL=http://localhost:8080
+   ```
+
+4. **Start the Development Server**:
+   ```bash
    npm run dev
    ```
-   Open your browser at: **`http://localhost:3000`**
+   Open your browser and navigate to: **`http://localhost:3000`**
+
+5. **Build for Production**:
+   ```bash
+   npm run build
+   npm run start
+   ```
 
 ---
 
 ## 🔑 Default Seeded Credentials
 
-All demo accounts share the standard password: **`password123`**
+Pre-configured accounts for testing full end-to-end commerce flows:
+
+> **Universal Password:** `password123`
 
 | Role | Phone Number (Login) | Password | Name | Store Name & Description |
 | :--- | :--- | :--- | :--- | :--- |
@@ -321,45 +194,16 @@ All demo accounts share the standard password: **`password123`**
 
 ---
 
-## 🧪 Automated Testing & Postman Verification
+## 🎯 Engineering Standards & Accessibility
 
-The entire API surface has been rigorously verified against the official Postman collection:
-
-1. Import `Rakamin Evermos Virtual Internship.postman_collection.json` into Postman.
-2. Set the collection variable `base_url` to `http://localhost:8080`.
-3. Execute the collection runner across all folders.
-
-### Automated Test Script Output:
-
-```text
-=== 1. Login Admin ===
-200 {'status': True, 'message': 'Login berhasil', 'data': {'token': 'ey...'}}
-
-=== 2. Get User Profile ===
-200 {'status': True, 'message': 'Profil berhasil diambil', 'data': {'nama': 'Fajar Vibe', 'notelp': '081234567890'}}
-
-=== 3. List Stores (Toko) ===
-200 {'status': True, 'message': 'Daftar toko berhasil diambil', 'data': {'page': 1, 'limit': 10, 'total': 4}}
-
-=== 4. Category Management (Admin Authorization) ===
-200 {'status': True, 'message': 'Kategori berhasil ditambahkan', 'data': {'id': 7, 'nama_category': 'Elektronik'}}
-
-=== 5. Product Catalog Filtering & Pagination ===
-200 {'status': True, 'message': 'Produk berhasil diambil', 'data': {'page': 1, 'limit': 12, 'total': 12}}
-
-=== 6. Shipping Address CRUD ===
-200 {'status': True, 'message': 'Alamat berhasil ditambahkan', 'data': {'id': 6, 'judul_alamat': 'Kantor Cabang'}}
-
-=== 7. ACID Checkout & Stock Deduction ===
-200 {'status': True, 'message': 'Transaksi berhasil dibuat', 'data': {'id': 5, 'kode_invoice': 'INV-20260924-XXXX'}}
-
-All 28 Test Scenarios: 100% Passed (0 Failures)
-```
+- **Design Integrity**: Agency-grade aesthetics avoiding generic component libraries. Custom CSS tokens for glassmorphism and double-bezel depth.
+- **Accessible Contrast**: WCAG AA/AAA compliance across both Light Mode and Dark Mode palettes.
+- **Strict Type Safety**: 100% typed TypeScript interfaces without `any` leaks in domain models.
+- **Mobile First & Fully Responsive**: Optimized layouts from compact mobile screens (360px) to ultra-wide displays (4K).
 
 ---
 
 ## 📜 Attribution & License
 
-- Original curriculum and assessment criteria inspired by **Project-Based Internship: Rakamin Academy x Evermos (Backend Developer)**.
-- Engineered and modernized as a production-grade **Backend & Cloud Architecture** portfolio project.
+- Frontend companion developed for the **Project-Based Internship: Rakamin Academy x Evermos (Backend & Fullstack Developer)**.
 - Open-sourced under the [MIT License](LICENSE).

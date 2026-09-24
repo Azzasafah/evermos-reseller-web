@@ -71,3 +71,8 @@ Desktop.ini
 *.swp
 *.swo
 *~
+
+# Antigravity & Agentic Tooling
+.agents/
+skills-lock.json
+
